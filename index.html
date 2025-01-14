@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reproductor de video</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/player.js" defer></script>
+        
+        
+    </head>
+    <body>
+        <header>
+            <h1>Eduardo Darynel Huchin Moo</h1>
+        </header>
+       
+        <main>
+
+            <div class="player">
+                <video id="miVideo" width="640" height="360">
+                    <source src="/videos/video1.mp4" type="video/mp4">
+                    <track id="subtitlesTrack" kind="subtitles" src="/sub/video1.vtt" srclang="es" label="Español">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <div class="video-controls">
+                    <button id="playPause">▶</button>
+                    <input type="range" id="progressBar" value="0" max="100">
+                    <span id="timeDisplay">00:00 / 00:00</span>
+                    <button id="muteButton">🔊</button>
+                    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+
+                    <div class="speed-control">
+                        <label for="speedControl">Velocidad:</label>
+                        <input type="range" id="speedControl" min="0.5" max="2" step="0.1" value="1">
+                        <span id="speedDisplay">1x</span>
+                    </div>
+
+                    <button id="fullscreenToggle">⛶</button>
+                    <button id="toggleSubtitles">Subtítulos: Activar</button>
+                    <button id="expandToggle">🔲</button> <!-- Botón para agrandar el video -->
+                    <button id="capturePhoto">📸</button>
+                    
+                </div>
+
+                <canvas id="canvas" style="display: none;"></canvas>
+
+                <!-- Carrusel de videos -->
+                <div class="video-carousel">
+                    <div class="carousel-item" data-src="/videos/video1.mp4">
+                        <img src="/imagenes/v1.png" alt="Video 1">
+                        <p>Video 1</p>
+                    </div>
+                    <div class="carousel-item" data-src="/videos/video2.mp4">
+                        <img src="/imagenes/v2.png" alt="Video 2">
+                        <p>Video 2</p>
+                    </div>
+                    <div class="carousel-item" data-src="/videos/video3.mp4">
+                        <img src="/imagenes/v3.png" alt="Video 3">
+                        <p>Video 3</p>
+                </div>
+                
+                 
+               
+            </div>
+
+            
+           
+        </main>
+        
+    </body>
+</html>
